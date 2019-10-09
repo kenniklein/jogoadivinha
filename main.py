@@ -23,31 +23,31 @@ while(True):
       #print('Formato inválido')
       continue 
 
-dificuldade = int(dificuldade)
+#dificuldade = int(dificuldade)
 
 intervalo_numeros = []
 
-while(dificuldade >= 1 and dificuldade <= 3):
+while(True):
     if(dificuldade == 1):
         tentativas = 5
         num_maximo = 10
         intervalo_numeros.insert(1, num_maximo)
         os.system('clear')
-        print('\nVocê escolheu o nível FÁCIL\nVocê tem', tentativas, 'tentativas para acertar o número secreto')
+        print('\nVocê escolheu o nível FÁCIL\nVocê tem {} tentativas para acertar o número secreto'.format(tentativas))
         break
     elif(dificuldade == 2):
         tentativas = 3
         num_maximo = 10
         intervalo_numeros.insert(1, num_maximo)
         os.system('clear')
-        print('\nVocê escolheu o nível MÉDIO\nVocê tem', tentativas, 'tentativas para acertar o número secreto')
+        print('\nVocê escolheu o nível MÉDIO\nVocê tem {} tentativas para acertar o número secreto'.format(tentativas))
         break
     elif(dificuldade == 3):
         tentativas = 3
         num_maximo = 20
         intervalo_numeros.insert(1, num_maximo)
         os.system('clear')
-        print('\nVocê escolheu o nível DIFÍCIL\nVocê tem', tentativas, 'tentativas para acertar o número secreto')
+        print('\nVocê escolheu o nível DIFÍCIL\nVocê tem {} tentativas para acertar o número secreto'.format(tentativas))
         break
 
 num_minimo = 1
@@ -95,7 +95,7 @@ while (i <= tentativas):
     if (i >= tentativas):
         os.system('clear')
         print('*** GAME OVER ***')
-        print('\nVocê tentou', tentativas, 'vezes e não conseguiu acertar o número secreto.')
+        print('\nVocê tentou {} vezes e não conseguiu acertar o número secreto.'.format(tentativas))
         print('\nNúmeros tentados: {}'.format(conteudo_num_tentados()))
         print('\nO número secreto era:', num_secreto)
         break
@@ -110,7 +110,7 @@ while (i <= tentativas):
 
     print('Números tentados até o momento: {}'.format(conteudo_num_tentados()))
 
-    print('Tentativa(s) restante(s):', (tentativas - i))
+    print('Tentativa(s) restante(s): {}'.format((tentativas - i)))
     i += 1
 
 print('\n***** FIM DO JOGO *****')
