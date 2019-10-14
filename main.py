@@ -20,10 +20,7 @@ while(True):
         continue
       break
     except:
-      #print('Formato inválido')
       continue 
-
-#dificuldade = int(dificuldade)
 
 intervalo_numeros = []
 
@@ -51,7 +48,6 @@ while(True):
         break
 
 num_minimo = 1
-# num_maximo = 10
 intervalo_numeros.insert(0, num_minimo)
 intervalo_numeros.insert(1, num_maximo)
 
